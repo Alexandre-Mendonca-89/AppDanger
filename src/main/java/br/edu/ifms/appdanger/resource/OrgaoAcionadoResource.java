@@ -57,7 +57,8 @@ public class OrgaoAcionadoResource {
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<OrgaoAcionadoDto>> findAll() {		
 		List<OrgaoAcionado> list = orgaoacionado.buscarTodos();
-		List<OrgaoAcionadoDto> listDto = list.stream().map(obj -> new OrgaoAcionadoDto(obj)).collect(Collectors.toList());
+		List<OrgaoAcionadoDto> listDto = list.stream().map(obj -> new OrgaoAcionadoDto(obj.getId(), obj.getNome()))
+				.collect(Collectors.toList());
 		return ResponseEntity.ok().body(listDto);
 	}	
 

@@ -19,8 +19,18 @@ public class InstituicaoDto implements Serializable{
 	public InstituicaoDto() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	public InstituicaoDto(Instituicao obj) {
+		super();
+		this.id = obj.getId();
+		this.nome = obj.getNome();
+		this.cidade = obj.getCidade();
+		this.bairro = obj.getBairro();
+		this.rua = obj.getRua();
+		this.telefone = obj.getTelefone();
+	}
 
-	public InstituicaoDto(Instituicao instituicao) {
+	public InstituicaoDto(Integer id, String nome, String cidade, String bairro, String rua, String telefone) {
 		super();
 		this.id = id;
 		this.nome = nome;

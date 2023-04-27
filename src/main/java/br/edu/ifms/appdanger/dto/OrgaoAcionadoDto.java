@@ -16,10 +16,16 @@ public class OrgaoAcionadoDto implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public OrgaoAcionadoDto(OrgaoAcionado orgaoAcionado) {
+	public OrgaoAcionadoDto(OrgaoAcionado obj) {
 		super();
-		this.id = orgaoAcionado.getId();
-		this.nome = orgaoAcionado.getNome();
+		this.id = obj.getId();
+		this.nome = obj.getNome();
+	}
+	
+	public OrgaoAcionadoDto(Integer id, String nome) {
+		super();
+		this.id = id;
+		this.nome = nome;
 	}
 
 	public Integer getId() {
